@@ -11,8 +11,8 @@ make_cards <- function(seed){
     
     maxed.out <- which(rowSums(is.na(m)) == 4)
     v <- 1:18
-    if (length(maxed.out)) v <- v[-c(maxed.out, i)]
-    i <- sample(v, 8 - length(i))
+    if (length(maxed.out) || length(i)) v <- v[-c(maxed.out, i)]
+    i <- if (length(v) > 8 - length(i)) sample(v, 8 - length(i)) else v
     m[i, col] <- NA
   }
   maxed.out <- which(rowSums(is.na(m)) == 4)
@@ -31,4 +31,18 @@ make_cards <- function(seed){
   m[i, 9] <- sample(80:90)
   
   return(m)
+}
+
+validate_card <- function(m){
+  stopifnot(identical(dim(m), c(18L, 9L)))
+  stopifnot(all(rowSums(is.na(m)) == 4))
+  for (col in 1:9){
+    values <- setdiff(m[, col], NA)
+    upr <- col * 10 - 1
+    lwr <- upr - 9
+    if (col == 9) upr <- upr + 1
+    if (!all(values %in% lwr:upr)) {
+      stop('Values out of range for column ', col, '\nValues: ', paste(sort(values), collapse=', '))
+    }
+  }
 }
