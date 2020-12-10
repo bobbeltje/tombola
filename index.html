@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <div id='test'></div>
 
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -23,7 +24,8 @@
   <script src='js.js?version=1'></script>
   <script>
       $.getJSON('www/1.json', function load_cards(data){
-        globalThis.cards = data;
+        // globalThis.cards = data;
+        make_card(data, 'test');
       });
   </script>
 </body>
