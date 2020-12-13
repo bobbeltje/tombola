@@ -1,3 +1,21 @@
+#card1 {
+    background-color: darkgreen;
+}
+#card2 {
+    background-color: cornflowerblue;
+}
+#card3 {
+    background-color: darkgoldenrod;
+}
+#card4 {
+    background-color: darkorchid;
+}
+#card5 {
+    background-color: limegreen;
+}
+#card6 {
+    background-color: magenta;
+}
 .card-container {
     display: inline-block;
     width: 49vw;
