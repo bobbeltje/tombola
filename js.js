@@ -1,5 +1,4 @@
 function make_card(m, id){
-    console.log('marking card');
     var card = '';
     for (var i = 0; i < 3; i++){
         card += make_row(m[i]);
@@ -15,6 +14,9 @@ function make_row(x){
     return row;
 }
 function make_number(x){
-    console.log(x);
-    return '<span class="number">' + ((x == "NA") ? 'X' : x) + '</span>';
+    return '<div class="num-box"><div class="num-dummy">' +
+        '<span class="number"><div class="centered">' +
+         ((x == "NA") ? 'X' : x) + 
+         '</div></span>' +
+        '</div></div>';
 }
