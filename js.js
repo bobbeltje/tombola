@@ -1,6 +1,7 @@
-function make_card(m, id){
+function make_card(m, id, idx){
     var card = '';
-    for (var i = 0; i < 3; i++){
+    idx = 3 * (idx - 1);
+    for (var i = idx; i < (idx + 3); i++){
         card += make_row(m[i]);
     }
     $('#'+id).append(card);

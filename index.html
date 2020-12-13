@@ -13,7 +13,17 @@
 </head>
 
 <body>
-  <div id='test'></div>
+  <div id='card1'></div>
+  <hr>
+  <div id='card2'></div>
+  <hr>
+  <div id='card3'></div>
+  <hr>
+  <div id='card4'></div>
+  <hr>
+  <div id='card5'></div>
+  <hr>
+  <div id='card6'></div>
 
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -25,7 +35,12 @@
   <script>
     $.getJSON('www/1.json', function load_cards(data) {
       // globalThis.cards = data;
-      make_card(data, 'test');
+      make_card(data, 'card1', 1);
+      make_card(data, 'card2', 2);
+      make_card(data, 'card3', 3);
+      make_card(data, 'card4', 4);
+      make_card(data, 'card5', 5);
+      make_card(data, 'card6', 6);
     });
     $(document).ready(function () {
       // $('span.number').click(function () {
