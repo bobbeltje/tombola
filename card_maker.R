@@ -1,4 +1,8 @@
 
+for (i in 1:10){
+  write(jsonlite::toJSON(make_cards(i)), paste0('www/', i, '.json'))
+}
+
 make_cards <- function(seed){
   set.seed(seed)
   
