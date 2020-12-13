@@ -1,4 +1,17 @@
+#radio-card {
+    text-align: center;
+}
+#welcome {
+    text-align: center;
+}
+#drop-container {
+    text-align: center;
+}
+#vai {
+    margin-top: 10px;
+}
 #tombola {
+    margin-top: 15px;
     display: none;
 }
 #card1 {
@@ -23,7 +36,7 @@
     border: 2px solid black;
     margin: 1px;
     display: inline-block;
-    width: 48vw;
+    width: 98vw;
 }
 .myrow {
     width: 98%;

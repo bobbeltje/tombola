@@ -10,35 +10,44 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Tombola!</title>
-  <link rel="icon" type="image/jpg" sizes="32x32" href="www/tombola.jpg">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="www/tombo.jpg">
   <!-- <link rel="icon" type="image/jpg" sizes="16x16" href="images/logo16x16.png"> -->
   <link rel="mask-icon" href="www/tombola.png">
-  <link rel="shortcut icon" href="www/tombola.jpg">
+  <link rel="shortcut icon" href="www/tombo.jpg">
 </head>
 
 <body>
   <div id='landing'>
-    <div class="dropdown" id='deck-dropdown'>
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="deck-choice" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Deck
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Cat</a>
-        <a class="dropdown-item" href="#">Dog</a>
-        <a class="dropdown-item" href="#">Mouse</a>
+    <h1 id='welcome'>
+      Benvenuto a Tombola!
+    </h1>
+    <hr>
+    <div id='drop-container'>
+      <div class="dropdown" id='deck-dropdown'>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="deck-choice" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Scegli le cartelle
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Cat</a>
+          <a class="dropdown-item" href="#">Dog</a>
+          <a class="dropdown-item" href="#">Mouse</a>
+        </div>
       </div>
-    </div>
+  
+      <button id='vai' type="button" class="btn btn-primary" onclick="go_tombola()">Vai Tombola!</button>
+      <hr>
+      <img src="www/Tombola.jpg" alt="" width="100%" height="100%">
 
-    <button type="button" class="btn btn-primary" onclick="go_tombola()">Vai Tombola!</button>
+    </div>
 
   </div>
 
   <div id='tombola'>
-    <div>
+    <div id='radio-card'>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="cardWidthOptions" id="cardWidth3" value="98"
-          onclick="set_card_width(this.value)">
+          onclick="set_card_width(this.value)" checked>
         <label class="form-check-label" for="cardWidth3">1</label>
       </div>
       <div class="form-check form-check-inline">
