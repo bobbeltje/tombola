@@ -15,8 +15,10 @@ function make_row(x){
 }
 function make_number(x){
     return '<div class="num-box"><div class="num-dummy">' +
-        '<span class="number"><div class="centered">' +
-         ((x == "NA") ? 'X' : x) + 
-         '</div></span>' +
-        '</div></div>';
+    '<span class="number' + 
+    ((x == "NA") ? '' : ' value') + 
+    '"><div class="centered">' +
+     ((x == "NA") ? 'X' : x) + 
+     '</div></span>' +
+    '</div></div>';
 }
