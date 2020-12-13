@@ -1,5 +1,11 @@
+.card-container {
+    display: inline-block;
+    width: 49vw;
+}
 .myrow {
-    width: 100vw;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 .num-box {
     display: inline-block;

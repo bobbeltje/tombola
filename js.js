@@ -23,3 +23,6 @@ function make_number(x){
      '</div></span>' +
     '</div></div>';
 }
+function set_card_width(val){
+    $('.card-container').css('width', val+'vw');
+}
