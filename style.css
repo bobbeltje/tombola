@@ -1,14 +1,14 @@
 #card1 {
-    background-color: darkgreen;
+    background-color: darkorchid;
 }
 #card2 {
     background-color: cornflowerblue;
 }
 #card3 {
-    background-color: darkgoldenrod;
+    background-color: gold;
 }
 #card4 {
-    background-color: darkorchid;
+    background-color: orangered;
 }
 #card5 {
     background-color: limegreen;
@@ -17,8 +17,10 @@
     background-color: magenta;
 }
 .card-container {
+    border: 2px solid black;
+    margin: 1px;
     display: inline-block;
-    width: 49vw;
+    width: 48vw;
 }
 .myrow {
     width: 98%;

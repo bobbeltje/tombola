@@ -19,7 +19,7 @@ function make_number(x){
     '<span class="number' + 
     ((x == "NA") ? '' : ' value') + 
     '"><div class="centered">' +
-     ((x == "NA") ? 'X' : x) + 
+     ((x == "NA") ? '' : x) + 
      '</div></span>' +
     '</div></div>';
 }
